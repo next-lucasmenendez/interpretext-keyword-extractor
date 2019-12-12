@@ -1,4 +1,4 @@
-package gotagger
+package keywords
 
 import "testing"
 

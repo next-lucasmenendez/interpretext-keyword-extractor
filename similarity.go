@@ -1,4 +1,4 @@
-package gotagger
+package keywords
 
 const scalingFactor float64 = 0.08
 

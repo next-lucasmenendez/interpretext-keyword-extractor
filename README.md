@@ -1,13 +1,12 @@
-[![GoDoc](https://godoc.org/github.com/lucasmenendez/gotagger?status.svg)](https://godoc.org/github.com/lucasmenendez/gotagger)
-[![Build Status](https://travis-ci.org/lucasmenendez/gotagger.svg?branch=master)](https://travis-ci.org/lucasmenendez/gotagger)
-[![Report](https://goreportcard.com/badge/github.com/lucasmenendez/gotagger)](https://goreportcard.com/report/github.com/lucasmenendez/gotagger)
+[![GoDoc](https://godoc.org/github.com/next-lucasmenendez/interpretext-keyword-extractor?status.svg)](https://godoc.org/github.com/next-lucasmenendez/interpretext-keyword-extractor)
+[![Report](https://goreportcard.com/badge/github.com/next-lucasmenendez/gotagger)](https://goreportcard.com/report/github.com/next-lucasmenendez/interpretext-keyword-extractor)
 
-# Gotagger
+# Interpretext Keyword Extractor
 Simple keyword extraction
 
 ## Installation
 ```bash
-go install github.com/lucasmenendez/gotagger
+go install github.com/next-lucasmenende/interpretext-keyword-extraction
 ```
 
 ### Stopwords
@@ -20,8 +19,8 @@ package main
 
 import (
     "fmt"
-    "github.com/lucasmenendez/gotokenizer"
-    "github.com/lucasmenendez/gotagger"
+    tokenizer "github.com/lucasmenendez/interpretext-tokenizer"
+    keywords "github.com/lucasmenendez/interpretext-keyword-extractor"
 )
 
 func main() {
@@ -30,11 +29,11 @@ func main() {
     var text string = "<input-text>"
     
     var words [][]string
-    for _, s := range gotokenizer.Sentences(text) {
-        words = append(words, gotokenizer.Words(s))
+    for _, s := range tokenizer.Sentences(text) {
+        words = append(words, tokenizer.Words(s))
     }
     
-    if tags, err := gotagger.GetTags(words, lang, limit); err != nil {
+    if tags, err := keywords.GetTags(words, lang, limit); err != nil {
         fmt.Println(err)
     } else {
         fmt.Printf("%q\n", tags)

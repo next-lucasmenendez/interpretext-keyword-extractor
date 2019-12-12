@@ -1,4 +1,4 @@
-package gotagger
+package keywords
 
 // ngrams function generates ngrams from list of tokens. Receive list of tokens
 // and n value. Returns list of ngrams.

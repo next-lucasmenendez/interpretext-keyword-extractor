@@ -1,5 +1,5 @@
-// Package gotagger provides functions to tag a text. The text must be tokenized.
-package gotagger
+// Package keywords provides functions to tag a text. The text must be tokenized.
+package keywords
 
 import (
 	"errors"

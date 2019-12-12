@@ -1,4 +1,4 @@
-package gotagger
+package keywords
 
 const similarityThreshold = 0.85
 
