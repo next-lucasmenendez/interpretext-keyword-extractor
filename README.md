@@ -19,8 +19,8 @@ package main
 
 import (
     "fmt"
-    tokenizer "github.com/lucasmenendez/interpretext-tokenizer"
-    keywords "github.com/lucasmenendez/interpretext-keyword-extractor"
+    tokenizer "github.com/next-lucasmenendez/interpretext-tokenizer"
+    keywords "github.com/next-lucasmenendez/interpretext-keyword-extractor"
 )
 
 func main() {
